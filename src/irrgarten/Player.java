@@ -21,6 +21,8 @@ public class Player {
     // Atributos de relaciones
     private ArrayList<Weapon> weapons;
     private ArrayList<Shield> shields;
+    // TRADUCIR A RUBY
+    private ArrayList<Team> teams;
     
     // Atributos de clase
     private String name;
@@ -45,6 +47,8 @@ public class Player {
         this.consecutiveHits = 0;
         this.weapons = new ArrayList<>();
         this.shields = new ArrayList<>();
+        
+        this.teams = new ArrayList<>();
     }
     
     // Metodo para obtener el ataque total de todas las armas del jugador
@@ -59,6 +63,11 @@ public class Player {
     
     public void takeWeapon(Weapon weapon){
         this.weapons.add(weapon);
+        // weapon.addPlayer(this);
+    }
+    // TRADUCIR A RUBY
+    public void addTeam(Team team){
+        this.teams.add(team);
     }
     
     

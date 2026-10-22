@@ -13,16 +13,16 @@ public class Shield {
     private float protection;
     private int uses;
 
-    public Shield(float pro, int use) {
-        protection = pro;
-        uses = use;
+    public Shield(float protection, int uses) {
+        this.protection = protection;
+        this.uses = uses;
     }
 
     public float protect() {
 
-        float intensidad = protection;
-        if (uses > 0) {
-            uses -= 1;
+        float intensidad = this.protection;
+        if (this.uses > 0) {
+            this.uses -= 1;
         } else {
             intensidad = 0;
         }
@@ -30,11 +30,11 @@ public class Shield {
     }
 
     public boolean discard() {
-        return Dice.discardElement(uses);
+        return Dice.discardElement(this.uses);
     }
 
     public String toString() {
-        String cadena = "S[" + protection + ", " + uses + "]";
+        String cadena = "S[" + this.protection + ", " + this.uses + "]";
         return cadena;
     }
 

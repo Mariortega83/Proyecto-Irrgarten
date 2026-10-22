@@ -4,10 +4,12 @@
  */
 package de;
 
+import irrgarten.Backpack;
 import irrgarten.Dice;
 import irrgarten.Directions;
 import irrgarten.Weapon;
 import irrgarten.Player;
+import irrgarten.Team;
 
 /**
  *
@@ -22,8 +24,8 @@ public class Irrgarten {
         String[] colores1 = {"Rojo"};
         // PRUEBAS PRACTICA 2
         Player p1 = new Player('1', Dice.randomIntelligence(), Dice.randomStrength());
-        Weapon armap1 = new Weapon(2.3f, 6, colores1);
-        Weapon armap2 = new Weapon(2.3f, 6, colores1);
+        Weapon armap1 = new Weapon(2.3f, 6);
+        Weapon armap2 = new Weapon(2.3f, 6);
         
         p1.takeWeapon(armap1);
         p1.takeWeapon(armap2);
@@ -35,7 +37,7 @@ public class Irrgarten {
         System.out.println(arriba);
 
         
-        Weapon arma = new Weapon(2.3f, 6, colores1);
+        Weapon arma = new Weapon(2.3f, 6);
 
         float ale = 0.0f;
         for (int i = 0; i < 10; i++) {
@@ -61,6 +63,18 @@ public class Irrgarten {
 
         colors[0] = "Amarillo";
         System.out.println(colors[0]);
+        
+        
+        System.out.println("-------------------------------------");
+        System.out.println("------------ PRUEBA 2 ---------------");
+        System.out.println("-------------------------------------");
+        
+        Team equipo = new Team();
+        equipo.addPlayer(p1);
+        // p1.addTeam(equipo);
+        
+        Backpack mochila = new Backpack();
+        
 
     }
 

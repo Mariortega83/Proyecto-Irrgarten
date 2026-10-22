@@ -4,6 +4,8 @@
  */
 package irrgarten;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author mario
@@ -14,15 +16,16 @@ public class Weapon {
     private int uses;
     private String[] colores;
 
-    public Weapon(float power, int uses, String[] colores) {
+    // private ArrayList<Player> players;
+    public Weapon(float power, int uses) {
         this.power = power;
         this.uses = uses;
-        this.colores = colores;
+        // this.players = new ArrayList<>();
     }
-    
-    public Weapon(){
-        this (Dice.weaponPower(), Dice.usesLeft(), new String[]{"Rojo", "Verde"});
-    } 
+
+    public Weapon() {
+        this(Dice.weaponPower(), Dice.usesLeft());
+    }
 
     public float attack() {
 
@@ -34,16 +37,19 @@ public class Weapon {
         }
         return intensidad;
     }
-    
-    public boolean discard(){
+
+    public boolean discard() {
         return Dice.discardElement(uses);
     }
-    
-    
-   
-    public String[] getColores(){
+
+    /* public void addPlayer(Player player){
+        this.players.add(player);
+    }
+     */
+    public String[] getColores() {
         return this.colores.clone();
     }
+
     public String toString() {
         String cadena = "W[" + power + ", " + uses + "]";
         return cadena;
