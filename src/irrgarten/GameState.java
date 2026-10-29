@@ -20,6 +20,7 @@ public class GameState {
     public GameState(String labyrinth, String players,
             String monsters, int currentPlayer,
             boolean winner, String log) {
+        
         this.labyrinth = labyrinth;
         this.players = players;
         this.monsters = monsters;

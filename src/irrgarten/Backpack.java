@@ -26,6 +26,6 @@ public class Backpack {
         this.weapons = new Weapon[TAM_BACK];
         
         this.weapons[0] = new Weapon(power1,uses1);
-        this.weapons[0] = new Weapon(power2,uses2);
+        this.weapons[1] = new Weapon(power2,uses2);
     }
 }
